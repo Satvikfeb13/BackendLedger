@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const ledgerSchema = new mongoose.Schema({
     account: {
-        type: mongoose.Schema.type.ObjectId,
+        type: mongoose.Schema.Types.ObjectId, 
         ref: "account",
         required: [true, "Ledger must be associated with an account"],
         index: true,
@@ -14,7 +14,7 @@ const ledgerSchema = new mongoose.Schema({
         immuntable: true
     },
     transaction: {
-        type: mongoose.Schema.type.ObjectId,
+        type: mongoose.Schema.Types.ObjectId, 
         ref: "transaction",
         required: [true, "Ledger must be associated with an account"],
         index: true,
